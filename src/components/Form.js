@@ -52,15 +52,15 @@ class Form extends React.Component{
         return(
             <div className='Form container mt-5'>
                 <div className='d-flex justify-content-center'>
-                    <form className="w-100 w-md-75 border rounded form z-depth-3">
+                    <form className="w-75 w-md-75 border rounded form z-depth-3">
 
                         <div className="form-group">
-                            <textarea name="" name="title" rows="1" className="form-control" placeholder='Title' onChange={this.handleChange}>
+                            <textarea  name="title" rows="1" className="form-control" placeholder='Title' onChange={this.handleChange}>
                             </textarea>
                         </div>
 
                         <div className="form-group ta2">
-                            <textarea name="" name="body" rows="3" className="form-control" placeholder='Add Note...' onChange={this.handleChange}>
+                            <textarea name="body" rows="3" className="form-control" placeholder='Add Note...' onChange={this.handleChange}>
                             </textarea>
                         </div>
 

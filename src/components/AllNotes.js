@@ -1,6 +1,5 @@
 import React from 'react'
 import Db from '../firebase/FbConfig'
-import { data } from 'jquery'
 import './AllNotes.css'
 
 // const db=firebase.firestore()
@@ -21,11 +20,11 @@ class AllNotes extends React.Component {
             let h5 = document.createElement('h5')
 
             div.className='col-12 col-md-6 col-lg-3 p-2'
-            div2.className ='card-content rounded px-3'
+            div2.className ='rounded px-3'
             div2.style.wordWrap="break-word"
             div2.style.border="1px black solid"
             h5.textContent = doc.data().title
-            h5.style.fontFamily=`'Roboto`
+            h5.style.fontFamily='Roboto'
             h5.style.fontWeight=`700`
             p.style.fontFamily = `'Roboto`
             p.style.fontWeight = `500`
@@ -41,8 +40,7 @@ class AllNotes extends React.Component {
         Db.collection('Items').orderBy('timestamp','asc').onSnapshot(snapshot => {
             let changes = snapshot.docChanges()
             changes.forEach(change => {
-                console.log(change.doc.data());
-                if (change.type == "added") {
+                if (change.type === "added") {
                     renderCafe(change.doc)
                  } //else if (change.type == "removed") {
                 //     let li = cafeList.querySelector('[data-id=' + change.doc.id + ']')
@@ -54,7 +52,7 @@ class AllNotes extends React.Component {
     }
     render(){
         return(
-            <div className='' style={{marginLeft:'50px',marginRight:"50px",marginTop:"50px"}}>
+            <div className='' style={{paddingRight:'100px',paddingLeft:"100px",marginTop:"100px"}}>
                 <div className='notes-parent row' >
                 </div>
             </div>

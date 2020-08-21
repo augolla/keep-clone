@@ -1,7 +1,5 @@
 import React,{createContext} from 'react'
-import $ from 'jquery'
 import { RiLightbulbFlashLine} from 'react-icons/ri'
-import { FiMenu } from 'react-icons/fi'
 import './Header.css'
 
 export const ShowContext=createContext()
@@ -14,7 +12,7 @@ function Header(){
                     <span className='text-white'>KEEP</span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
+                {/* <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Login</a>
@@ -23,7 +21,7 @@ function Header(){
                             <a class="nav-link" href="#">SignUp</a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </nav>
             // <nav className="nav-wrapper white">
             //     <div className="container-fluid">

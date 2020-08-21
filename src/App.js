@@ -1,10 +1,10 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import './App.css';
-import Header,{ShowContext} from './components/Header'
+import Header from './components/Header'
 import AllNotes from './components/AllNotes'
 import Form from './components/Form'
-import SignUpPage from './components/SignUpPage'
-import LogInPage from './components/LogInPage'
+// import SignUpPage from './components/SignUpPage'
+// import LogInPage from './components/LogInPage'
 // import firebase from './firebase/fbConfig'
 
 function App(){
@@ -16,14 +16,11 @@ function App(){
   //     })
   //   }))
   // }
-  const cts=useContext(ShowContext)
   return (
     <div className="App">
       <Header/>
       <Form/>
       <AllNotes/>
-      <SignUpPage/>
-      <LogInPage/>
     </div>
   );
 }
