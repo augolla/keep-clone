@@ -1,0 +1,89 @@
+.form{
+    position: relative;
+}
+.form-group,.form-control{
+    border: none;
+}
+textarea{
+    resize: none;
+}
+textarea[placeholder='Title']{
+    display: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+textarea[placeholder='Add Note...']{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+::placeholder{
+    color:grey !important;
+    font-weight: 500;
+}
+
+.col-1{
+    cursor: pointer;
+    margin-right: 10px;
+    transition: .2s background
+}
+.col-1:hover{
+    background-color: darkslategray;
+    color:white;
+}
+
+.halfway-fab{
+    position: absolute;
+    right:8px;
+    bottom: 0px;
+}
+
+
+
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: black;
+    color: white;
+    font-size: 80%;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -2.4em;
+    left: 40%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+}
+[data-title] {
+    position: relative;
+}
+
+
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
